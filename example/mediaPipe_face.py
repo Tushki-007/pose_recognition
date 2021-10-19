@@ -10,7 +10,7 @@ prev_frame_time = 0
 new_frame_time = 0
 
 # For webcam input:
-cap = cv2.VideoCapture("../../../assets/test.mp4")
+cap = cv2.VideoCapture(0)
 with mp_face_detection.FaceDetection(min_detection_confidence=0.5) as face_detection:
     while cap.isOpened():
         success, image = cap.read()
