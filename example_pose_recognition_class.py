@@ -1,22 +1,16 @@
 import math
 import time
-
 import cv2
 import numpy as np
-
 import pose_recognition as pr
 
 # camera Input
-cap = cv2.VideoCapture("../../assets/test.mp4")
+cap = cv2.VideoCapture(0)
 # object for the class pose_recognition.py
 detector = pr.PoseDetector()
 # Initializing few previous variable to zero
 p_time = 0  # previous_time for FPS
 c0, c1 = 0, 0  # x, y coordinates of Centroid
-xp, yp, distance, angle = 0, 0, 0, 0  # Variables
-
-# Creating a canvas to draw the line on the image
-img_canvas = np.zeros((480, 640, 3), np.uint8)
 
 while True:
 
